@@ -1,7 +1,7 @@
 import { Award, BarChart3, Cloud, Code2, SmartphoneIcon, Trophy } from "lucide-react";
 export default function Experience() {
     return (
-        <section className="py-20" id="experience">
+        <section className="py-20 bg-slate-50 dark:bg-slate-900/20" id="experience">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center mb-16">

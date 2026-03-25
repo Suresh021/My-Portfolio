@@ -1,4 +1,5 @@
 import About from "./components/About.jsx";
+import Certifications from "./components/Certifications.jsx";
 import Contact from "./components/Contact.jsx";
 import Experience from "./components/Experience.jsx";
 import Footer from "./components/Footer.jsx";
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Certifications />
       <Experience />
       <Contact />
       <Footer />
