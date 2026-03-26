@@ -1,5 +1,9 @@
-import { Award, BarChart3, Cloud, Code2, SmartphoneIcon, Trophy } from "lucide-react";
+import { Award, BarChart3, Cloud, Code2, SmartphoneIcon, Trophy, X } from "lucide-react";
+import { useState } from "react";
+import cert1 from "../assets/images/Internships/cert1.jpg";
+import cert2 from "../assets/images/Internships/cert2.jpg";
 export default function Experience() {
+    const [selectedImage, setSelectedImage] = useState(null);
     return (
         <section className="py-20 bg-slate-50 dark:bg-slate-900/20" id="experience">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,6 +63,15 @@ export default function Experience() {
                                     ))}
                                 </div>
 
+                                {/* Button */}
+                                <button
+                                    onClick={() => setSelectedImage(cert1)}
+                                    className="mt-4 px-4 py-2 text-sm font-semibold rounded-lg 
+            bg-primary text-white hover:opacity-90 transition"
+                                >
+                                    View Certificate
+                                </button>
+
                             </div>
 
 
@@ -103,6 +116,15 @@ export default function Experience() {
                                         </span>
                                     ))}
                                 </div>
+
+                                {/* Button */}
+                                <button
+                                    onClick={() => setSelectedImage(cert2)}
+                                    className="mt-4 px-4 py-2 text-sm font-semibold rounded-lg 
+            bg-primary text-white hover:opacity-90 transition"
+                                >
+                                    View Certificate
+                                </button>
 
                             </div>
 
@@ -206,6 +228,31 @@ export default function Experience() {
                 </div>
 
             </div>
+            {/* ================= MODAL ================= */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+                    onClick={() => setSelectedImage(null)}
+                >
+
+                    {/* Close */}
+                    <button
+                        className="absolute top-6 right-6 text-white"
+                        onClick={() => setSelectedImage(null)}
+                    >
+                        <X size={30} />
+                    </button>
+
+                    {/* Image */}
+                    <img
+                        src={selectedImage}
+                        alt="Internship Certificate"
+                        className="max-w-[90%] max-h-[90%] rounded-xl shadow-lg"
+                        onClick={(e) => e.stopPropagation()}
+                    />
+
+                </div>
+            )}
         </section>
     );
 }

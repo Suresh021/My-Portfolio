@@ -3,12 +3,24 @@ import profile from "../assets/images/profile.jpg";
 
 export default function Hero() {
   return (
-    <section className="py-20 lg:py-32">
+    <section className="py-20 lg:py-30">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center px-4">
 
-        <div className="space-y-6">
+        <div className="space-y-5">
 
-          <h1 className="text-5xl lg:text-7xl font-black">
+          {/* Badge */}
+          <div className="animate-fadeInUp flex items-center gap-2 w-fit px-4 py-1 rounded-full 
+  bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+            </span>
+
+            Open for Opportunities
+          </div>
+
+          <h1 className="animate-fadeInUp text-5xl lg:text-7xl font-black">
             Hi, I'm
             <span className="block text-primary">Doddi Suresh Kumar</span>
           </h1>
@@ -38,7 +50,7 @@ export default function Hero() {
 
           </div>
 
-          <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
+          <p className="animate-fadeInUp mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
             Turning data into meaningful insights and ideas into real-world applications by building intelligent solutions with Data Science, AI, and modern web technologies.
           </p>
 
@@ -46,7 +58,7 @@ export default function Hero() {
 
             <a
               href="#projects"
-              className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition"
+              className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition active:scale-95"
             >
               View Projects
             </a>
@@ -54,7 +66,7 @@ export default function Hero() {
             <a
               href="..\public\Resume.pdf"
               download
-              className="bg-slate-200 dark:bg-slate-800 px-8 py-4 rounded-xl font-bold hover:scale-105 transition"
+              className="bg-slate-200 dark:bg-slate-800 px-8 py-4 rounded-xl font-bold hover:scale-105 transition active:scale-95"
             >
               Download Resume
             </a>

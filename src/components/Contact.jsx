@@ -18,7 +18,7 @@ export default function Contact() {
                             and Software Engineering roles. Feel free to reach out!
                         </p>
 
-                        <div className="space-y-4">
+                        <div className="space-y-0">
 
                             <div className="flex items-center gap-2">
                                 <div className="flex items-center justify-center w-12 h-12 rounded-xl 

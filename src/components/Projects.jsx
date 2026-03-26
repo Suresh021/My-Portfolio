@@ -1,14 +1,20 @@
 import { Code2, Link } from "lucide-react";
 import { projects } from "../data/projectsData";
+import GitHubStats from "./GitHubStats.jsx";
 
 export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-slate-50 dark:bg-slate-900/20">
       <div className="max-w-7xl mx-auto px-4">
 
-        <h2 className="text-4xl font-black mb-12 text-center">
-          Featured <span className="text-primary">Projects</span>
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-black mb-4">
+            Featured <span className="text-primary">Projects</span>
+          </h2>
+          <p className="text-slate-500">
+            Projects showcasing my work in data science and development.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
 
@@ -97,6 +103,9 @@ export default function Projects() {
             </div>
           ))}
 
+        </div>
+        <div>
+          <GitHubStats />
         </div>
       </div>
     </section>
