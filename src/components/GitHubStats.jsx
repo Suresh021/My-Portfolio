@@ -4,9 +4,9 @@ import { FaGithub } from "react-icons/fa";
 export default function GithubStats() {
 
     const stats = {
-        projects: 13,
-        contributions: 750,
-        repos: 27,
+        projects: 20,
+        contributions: 180,
+        repos: 30,
     };
 
     const [count, setCount] = useState({
